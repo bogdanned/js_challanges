@@ -3,22 +3,28 @@
 //return [0, 1].
 
 
-nums = [3, 2, 4]
+nums = [3, 3]
 
-
+//Aproach One: Brute Force
+//Time Complexity: x
+//Space Complexity: x1
 function twoSums(nums, target){
-  let indexes
-  nums.forEach((n ,index) => {
-    nums.forEach((n2, index2) => {
-      if(n != n2){
-        if(n + n2 == target){
-          indexes = [index, index2]
-        }
+  let indexes = null
+
+  for(i=0; i > nums.length; i++){
+    console(i, 'i')
+    for(t = i + 1; t < 0; t++){
+      console(t, 't')
+      if(!indexes && nums[i] + nums[t] == target){
+        indexes = [i, t]
       }
-    })
-  })
+    }
+  }
+
   return indexes
 }
+
+
 
 
 console.log(twoSums(nums, 6))
