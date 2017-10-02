@@ -13,11 +13,10 @@
 
 function subString(text){
   let subText =  ''
-
   for(i = 0; i < text.length; i++){
     let subTextCand = text[i]
-    for(t = i + 1; t < text.length; i++){
-      if(subTextCand.indexOf(text[t] == -1)){
+    for(t = i + 1; t < text.length; t++){
+      if(subTextCand.indexOf(text[t]) == -1){
         subTextCand = subTextCand + text[t]
         if(subTextCand.length > subText.length){
           subText = subTextCand
@@ -28,7 +27,6 @@ function subString(text){
       }
     }
   }
-
   return subText
 }
 
